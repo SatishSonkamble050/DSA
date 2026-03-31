@@ -93,6 +93,36 @@ def optimize(arr):
         hashmap[i] = 1
 
 
+# --------------------------------------------------
+# 5. FLOYD’S CYCLE DETECTION (BEST)
+# --------------------------------------------------
+def optimal(nums):
+    """
+    Works when:
+    - numbers are in range 1 to n
+    - only one duplicate exists
+
+    Time Complexity: O(n)
+    Space Complexity: O(1)
+    """
+
+    slow = nums[0]
+    fast = nums[0]
+
+    # Step 1: Detect cycle
+    while True:
+        slow = nums[slow]
+        fast = nums[nums[fast]]
+        if slow == fast:
+            break
+
+    # Step 2: Find entry point (duplicate)
+    slow = nums[0]
+    while slow != fast:
+        slow = nums[slow]
+        fast = nums[fast]
+
+    return slow
 
 
 # --------------------------------------------------
@@ -108,3 +138,4 @@ if __name__ == "__main__":
     print("Brute Improved (Set):", brute_improved(nums))
     print("Sorting (Best):", best(nums))
     print("HashMap (Optimize):", optimize(nums))
+    print("Floyd’s Algorithm (Optimal):", optimal(nums))
