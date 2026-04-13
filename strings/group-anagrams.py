@@ -16,7 +16,7 @@ import copy
 
 
 # ------------------------------------------------------------
-# 1. 🔴 BRUTE FORCE APPROACH
+# 1.  BRUTE FORCE APPROACH
 # ------------------------------------------------------------
 def brute_force(strs):
     """
@@ -70,7 +70,7 @@ def brute_force(strs):
 
 
 # ------------------------------------------------------------
-# 2. 🟡 BETTER APPROACH (CHARACTER COUNT KEY)
+# 2.  BETTER APPROACH (CHARACTER COUNT KEY)
 # ------------------------------------------------------------
 def better(strs):
     """
@@ -101,7 +101,7 @@ def better(strs):
 
 
 # ------------------------------------------------------------
-# 3. 🟢 OPTIMAL APPROACH (SORTING)
+# 3.  OPTIMAL APPROACH (SORTING)
 # ------------------------------------------------------------
 def optimal(strs):
     """
@@ -127,16 +127,16 @@ def optimal(strs):
 
 
 # ------------------------------------------------------------
-# 🔹 MAIN FUNCTION
+#  MAIN FUNCTION
 # ------------------------------------------------------------
 if __name__ == "__main__":
     strs = ["eat", "tea", "tan", "ate", "nat", "bat"]
 
-    print("\n🔴 BRUTE FORCE RESULT:")
+    print("\n BRUTE FORCE RESULT:")
     print(brute_force(strs))
 
-    print("\n🟡 BETTER RESULT:")
+    print("\n BETTER RESULT:")
     print(better(strs))
 
-    print("\n🟢 OPTIMAL RESULT:")
+    print("\n OPTIMAL RESULT:")
     print(optimal(strs))
